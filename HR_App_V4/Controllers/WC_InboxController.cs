@@ -59,6 +59,8 @@ namespace HR_App_V4.Controllers
             DropDowns();
             if (ModelState.IsValid)
             {
+                wC_Inbox.Add_User = User.Identity.Name;
+                wC_Inbox.Date_Added = DateTime.Now;
                 _context.Add(wC_Inbox);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -182,6 +184,16 @@ namespace HR_App_V4.Controllers
             };
             maritalStatus.Insert(0, new SelectListItem { Value = null, Text = "Select" });
             ViewBag.maritalStatus = maritalStatus;
+
+            List<SelectListItem> travelMethods = new()
+            {
+                new SelectListItem { Value = "Self", Text = "Self" },
+                new SelectListItem { Value = "Ambulance", Text = "Ambulance" },
+                new SelectListItem { Value = "Coworker", Text = "Coworker" },
+                new SelectListItem { Value = "Other", Text = "Other" }
+            };
+            travelMethods.Insert(0, new SelectListItem { Value = null, Text = "Select" });
+            ViewBag.travelMethods = travelMethods;
         }
     }
 }
