@@ -18,7 +18,7 @@ namespace HR_App_V4.Models.DB
         public string? Address { get; set; }
         public string? Phone_Number { get; set; }
         public string? EncovaID { get; set; }
-        public int EmployeeID { get; set; }
+        public string EmployeeID { get; set; } = null!;
         public string Org_Number { get; set; } = null!;
         public DateTime Hire_Date { get; set; }
         public string Job_Title { get; set; } = null!;

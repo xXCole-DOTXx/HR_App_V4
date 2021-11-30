@@ -16,12 +16,12 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label class="control-label">First Name</label>
-                            <input asp-for="First_Name" class="form-control" />
+                            <input asp-for="First_Name" class="form-control" placeholder="John"/>
                             <span asp-validation-for="First_Name" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
                             <label class="control-label">Last Name</label>
-                            <input asp-for="Last_Name" class="form-control" />
+                            <input asp-for="Last_Name" class="form-control" placeholder="Doe"/>
                             <span asp-validation-for="Last_Name" class="text-danger"></span>
                         </div>
                     </div>
@@ -51,23 +51,23 @@
             <br />
              <div class="row">
                 <div class="form-group col-md-3">
-                    <label asp-for="SSN" class="control-label"></label>
-                    <input asp-for="SSN" class="form-control" />
+                    <label class="control-label">Last 4 of SSN</label>
+                    <input asp-for="SSN" class="form-control" placeholder="****"/>
                     <span asp-validation-for="SSN" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-3">
                     <label asp-for="EmployeeID" class="control-label"></label>
-                    <input asp-for="EmployeeID" class="form-control" />
+                    <input asp-for="EmployeeID" class="form-control" placeholder="e096587"/>
                     <span asp-validation-for="EmployeeID" class="text-danger"></span>
                 </div>
                  <div class="form-group col-md-3">
-                    <label class="control-label">Phone Number</label>
-                    <input asp-for="Phone_Number" class="form-control" />
+                    <label class="control-label">Home Phone Number</label>
+                    <input asp-for="Phone_Number" class="form-control" placeholder="XXX-XXX-XXXX"/>
                     <span asp-validation-for="Phone_Number" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-3">
                     <label asp-for="Address" class="control-label"></label>
-                    <input asp-for="Address" class="form-control" />
+                    <input asp-for="Address" class="form-control" placeholder="1900 Kanawha Blvd E Charleston, WV 25305"/>
                     <span asp-validation-for="Address" class="text-danger"></span>
                 </div>
            </div>
@@ -81,7 +81,7 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label class="control-label">Org Number</label>
-                            <input asp-for="Org_Number" class="form-control" />
+                            <input asp-for="Org_Number" class="form-control" placeholder="0025"/>
                             <span asp-validation-for="Org_Number" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
@@ -94,11 +94,11 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label class="control-label">Job Title</label>
-                            <input asp-for="Job_Title" class="form-control" />
+                            <input asp-for="Job_Title" class="form-control" placeholder="Programmer Analyst"/>
                             <span asp-validation-for="Job_Title" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="control-label">Work Schedule</label>
+                            <label class="control-label">Regular Required Work Schedule (paid hours only)</label>
                             <input asp-for="Work_Schedule" class="form-control" />
                             <span asp-validation-for="Work_Schedule" class="text-danger"></span>
                         </div>
@@ -123,26 +123,26 @@
                 <div class="col-md-8">
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label class="control-label">Injury Date</label>
+                            <label class="control-label">Date of Injury</label>
                             <input asp-for="Injury_Date" class="form-control" />
                             <span asp-validation-for="Injury_Date" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="control-label">Injury Time</label>
-                            <input asp-for="Injury_Time" class="form-control" />
+                            <label class="control-label">Time of Injury</label>
+                            <input asp-for="Injury_Time" class="form-control" placeholder="10:00am"/>
                             <span asp-validation-for="Injury_Time" class="text-danger"></span>
                         </div>
                     </div>
                     <br />
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label class="control-label">DOT 12</label>
-                            <input asp-for="DOT_12" class="form-control" />
+                            <label class="control-label">Injury Documented on DOT-12?</label>
+                            <select asp-for="DOT_12" name="DOT_12" class="form-control" asp-items="@ViewBag.options"></select>
                             <span asp-validation-for="DOT_12" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="control-label">Start Time</label>
-                            <input asp-for="Start_Time" class="form-control" />
+                            <label class="control-label">Start Time on Date of Injury</label>
+                            <input asp-for="Start_Time" class="form-control" placeholder="7:00am"/>
                             <span asp-validation-for="Start_Time" class="text-danger"></span>
                         </div>
                     </div>
@@ -161,16 +161,16 @@
             <div class="row">
                 <div class="form-group col-md-3">
                     <label class="control-label">Injured Body Part</label>
-                    <input asp-for="Injured_Body_Part" class="form-control" />
+                    <input asp-for="Injured_Body_Part" class="form-control" placeholder="Forearm"/>
                     <span asp-validation-for="Injured_Body_Part" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-3">
-                    <label asp-for="Side" class="control-label"></label>
+                    <label class="control-label">Which Side?</label>
                     <input asp-for="Side" class="form-control" />
                     <span asp-validation-for="Side" class="text-danger"></span>
                 </div>
                 <div class="form-group form-check col-md-3">
-                    <label class="control-label">Missing Work</label>
+                    <label class="control-label">Missing Work?</label>
                     <select asp-for="Missing_Work" name="Missing_Work" class="form-control" asp-items="@ViewBag.options"></select>
                     <span asp-validation-for="Missing_Work" class="text-danger"></span>
                 </div>
@@ -183,17 +183,17 @@
             <br />
             <div class="row">
                 <div class="form-group col-md-3">
-                    <label class="control-label">Began Missing Work</label>
+                    <label class="control-label">Date Began Missing Work</label>
                     <input asp-for="Begin_Missing_Date" class="form-control" />
                     <span asp-validation-for="Begin_Missing_Date" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-3">
-                    <label class="control-label">Began Missing Time</label>
-                    <input asp-for="Begin_Missing_Time" class="form-control" />
+                    <label class="control-label">Time Began Missing Work</label>
+                    <input asp-for="Begin_Missing_Time" class="form-control" placeholder="11:30am"/>
                     <span asp-validation-for="Begin_Missing_Time" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-3">
-                    <label class="control-label">Return To Work Date</label>
+                    <label class="control-label">Date Returned To Work (if applicable)</label>
                     <input asp-for="Return_To_Work_Date" class="form-control" />
                     <span asp-validation-for="Return_To_Work_Date" class="text-danger"></span>
                 </div>
@@ -316,17 +316,41 @@
                 <span asp-validation-for="Medical_History" class="text-danger"></span>
             </div>
             <br />
-            <div class="form-group">
-                <label class="control-label">Was the inbox submitted within 48 hours/2 business days of the injury date? (Yes/No)</label>
-                <input asp-for="Inbox_Submitted" class="form-control" />
+            <div class="form-group col-md-6">
+                <label class="control-label">Was the inbox submitted within 48 hours/2 business days of the injury date?</label>
+                <select asp-for="Inbox_Submitted" name="Inbox_Submitted" class="form-control col-md-3" asp-items="@ViewBag.options"></select>
                 <span asp-validation-for="Inbox_Submitted" class="text-danger"></span>
             </div>
             <br />
-            <div class="form-group">
+            <div class="form-group" id="why">
                 <label class="control-label">Why was the inbox not submitted within 48 hours/2 business days?</label>
                <textarea asp-for="Inbox_Reason" class="form-control"></textarea>
                 <span asp-validation-for="Inbox_Reason" class="text-danger"></span>
             </div>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#why').hide();
+                    //When page loads check if the drop down is already yes
+                    var chosenValue = $('#Inbox_Submitted').val();
+                    console.log(chosenValue);
+                    if (chosenValue == "False") {
+                        $('#why').show();
+                    }
+                    else {
+                        $('#why').hide();
+                    }
+                    //If the drop down selection changes check again
+                    $('#Inbox_Submitted').change(function () {
+                        var selectedValue = $(this).val();
+                        if (selectedValue == "False") {
+                            $('#why').show();
+                        }
+                        else {
+                            $('#why').hide();
+                        }
+                    });
+                });
+            </script>
             <br />
             <div class="form-group">
                 <label class="control-label">Additional comments/details (optional)</label>
