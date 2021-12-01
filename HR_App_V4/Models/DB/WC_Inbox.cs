@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ExpressiveAnnotations.Attributes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
@@ -13,7 +14,7 @@ namespace HR_App_V4.Models.DB
         public string Last_Name { get; set; } = null!;
         [MaxLength(10)]
         public string? Gender { get; set; }
-        [MaxLength(10)]
+        [MaxLength(30)]
         public string? Marital_Status { get; set; }
         [MaxLength(50)]
         public string? Employment_Status { get; set; }
@@ -53,20 +54,25 @@ namespace HR_App_V4.Models.DB
         public bool Missing_Work { get; set; }
         public DateTime? Missing_Work_Date { get; set; }
         public DateTime? Begin_Missing_Date { get; set; }
-        [MaxLength(5)]
+        [MaxLength(10)]
         public string? Begin_Missing_Time { get; set; }
         public DateTime? Return_To_Work_Date { get; set; }
-        [MaxLength(25)]
+        [MaxLength(3)]
         public string? Doctors_Release { get; set; }
         public bool? Treatment { get; set; }
+        [RequiredIf("Treatment == true", ErrorMessage = "Treatment Date is required.")]
         public DateTime? Treatment_Date { get; set; }
         [MaxLength(100)]
+        [RequiredIf("Treatment == true", ErrorMessage = "Treatment Provider is required.")]
         public string? Treatment_Provider { get; set; }
         [MaxLength(15)]
+        [RequiredIf("Treatment == true", ErrorMessage = "Treatment Provider Phone is required.")]
         public string? Treatment_Provider_Phone { get; set; }
         [MaxLength(50)]
+        [RequiredIf("Treatment == true", ErrorMessage = "Where first treated is required.")]
         public string? Transport_First_Treatment { get; set; }
         [MaxLength(50)]
+        [RequiredIf("Treatment == true", ErrorMessage = "The city of treatment is required.")]
         public string? Transport_City { get; set; }
         [MaxLength(250)]
         public string Injury_Description { get; set; } = null!;
@@ -82,8 +88,8 @@ namespace HR_App_V4.Models.DB
         public string? Questioned { get; set; }
         [MaxLength(250)]
         public string? Medical_History { get; set; }
-        [MaxLength(10)]
-        public string Inbox_Submitted { get; set; } = null!;
+        public bool Inbox_Submitted { get; set; }
+        [RequiredIf("Inbox_Submitted == false", ErrorMessage = "The reason is required.")]
         public string? Inbox_Reason { get; set; }
         [MaxLength(250)]
         public string? Comments { get; set; }
