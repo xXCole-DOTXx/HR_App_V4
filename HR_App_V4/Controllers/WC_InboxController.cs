@@ -54,13 +54,18 @@ namespace HR_App_V4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,First_Name,Last_Name,Gender,Marital_Status,SSN,Address,Phone_Number,Org_Number,Hire_Date,Job_Title,Work_Schedule,Injury_Date,Injury_Time,Injury_Type,DOT_12,Start_Time,Injured_Body_Part,Side,Missing_Work,Missing_Work_Date,Begin_Missing_Date,Begin_Missing_Time,Return_To_Work_Date,Doctors_Release,Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_First_Treatment,Transport_City,Injury_Description,Equipment,Witness,Supervisor_Name,Supervisor_Phone,Questioned,Medical_History,Inbox_Submitted,Inbox_Reason,Comments,User_Email,Supervisor_Email,Safety_Specialist_Email,Optional_Email,Optional_Email2,Optional_Email3,HDHR_Manager_Email,Add_User,Date_Added")] WC_Inbox wC_Inbox)
+        public async Task<IActionResult> Create([Bind("ID,First_Name,Last_Name,Gender,Marital_Status,DOB,SSN,Phone_Number,Address,Org_Number,Hire_Date,Job_Title,Work_Schedule,Injury_Date,Injury_Time,Injury_Type,DOT_12,Start_Time,Injured_Body_Part,Side,Missing_Work,Missing_Work_Date,Begin_Missing_Date,Begin_Missing_Time,Return_To_Work_Date,Doctors_Release,Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_First_Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_City,Supervisor_Name,Supervisor_Phone,Injury_Description,Equipment,Witness,Questioned,Medical_History,Inbox_Submitted,Inbox_Reason,Comments,User_Email,Supervisor_Email,Safety_Specialist_Email,Optional_Email,Optional_Email2,Optional_Email3,HDHR_Manager_Email,Add_User,Date_Added")] WC_Inbox wC_Inbox)
         {
             DropDowns();
             if (ModelState.IsValid)
             {
+                System.Diagnostics.Debug.WriteLine(wC_Inbox.First_Name);
+                System.Diagnostics.Debug.WriteLine(wC_Inbox.Last_Name);
+                System.Diagnostics.Debug.WriteLine(wC_Inbox.Gender);
                 wC_Inbox.Add_User = User.Identity.Name;
                 wC_Inbox.Date_Added = DateTime.Now;
+                System.Diagnostics.Debug.WriteLine(wC_Inbox.Add_User);
+                System.Diagnostics.Debug.WriteLine(wC_Inbox.Date_Added);
                 _context.Add(wC_Inbox);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
@@ -90,7 +95,7 @@ namespace HR_App_V4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("ID,First_Name,Last_Name,Gender,Marital_Status,Employment_Status,SSN,DOB,Hourly_Rate,Daily_Rate,Address,Phone_Number,EncovaID,EmployeeID,Org_Number,Hire_Date,Job_Title,Work_Schedule,Injury_Date,Injury_Time,DOT_12,Start_Time,Injured_Body_Part,Side,Missing_Work,Missing_Work_Date,Begin_Missing_Date,Begin_Missing_Time,Return_To_Work_Date,Doctors_Release,Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_First_Treatment,Transport_City,Injury_Description,Equipment,Witness,Supervisor_Name,Supervisor_Phone,Questioned,Medical_History,Inbox_Submitted,Inbox_Reason,Comments,User_Email,Supervisor_Email,Safety_Specialist_Email,Optional_Email,Optional_Email2,Optional_Email3,HDHR_Manager_Email,TX_EROI_Lag,Claim_Ruling,Injury_Type,TTD_Onset_Date,Restricted_RTW,Full_Duty_RTW,TTD_Award_Notice,RTW_Notice_Carrier,Lost_Time_Start1,Lost_Time_End1,Lost_Time_Start2,Lost_Time_End2,Lost_Time_Start3,Lost_Time_End3,Status,HR_Comments,Add_User,Date_Added,HR_User,Date_Modified")] WC_Inbox wC_Inbox)
+        public async Task<IActionResult> Edit(int id, [Bind("ID,First_Name,Last_Name,Gender,Marital_Status,Employment_Status,SSN,DOB,Hourly_Rate,Daily_Rate,Address,Phone_Number,Claim_Number,EmployeeID,Org_Number,Hire_Date,Job_Title,Work_Schedule,Injury_Date,Injury_Time,DOT_12,Start_Time,Injured_Body_Part,Side,Missing_Work,Missing_Work_Date,Begin_Missing_Date,Begin_Missing_Time,Return_To_Work_Date,Doctors_Release,Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_First_Treatment,Transport_City,Injury_Description,Equipment,Witness,Supervisor_Name,Supervisor_Phone,Questioned,Medical_History,Inbox_Submitted,Inbox_Reason,Comments,User_Email,Supervisor_Email,Safety_Specialist_Email,Optional_Email,Optional_Email2,Optional_Email3,HDHR_Manager_Email,TX_EROI_Lag,Claim_Ruling,Injury_Type,TTD_Onset_Date,Restricted_RTW,Full_Duty_RTW,TTD_Award_Notice,RTW_Notice_Carrier,Lost_Time_Start1,Lost_Time_End1,Lost_Time_Start2,Lost_Time_End2,Lost_Time_Start3,Lost_Time_End3,Status,HR_Comments,Add_User,Date_Added,HR_User,Date_Modified")] WC_Inbox wC_Inbox)
         {
             DropDowns();
             if (id != wC_Inbox.ID)
@@ -231,7 +236,7 @@ namespace HR_App_V4.Controllers
             schedules.Insert(0, new SelectListItem { Value = null, Text = "Select" });
             ViewBag.schedules = schedules;
 
-           /* List<SelectListItem> employmentTypes = new()
+            List<SelectListItem> employmentTypes = new()
             {
                 new SelectListItem { Value = "Full Time", Text = "Full Time" },
                 new SelectListItem { Value = "Temporary", Text = "Temporary" }
@@ -246,7 +251,7 @@ namespace HR_App_V4.Controllers
                 new SelectListItem { Value = "Tolled", Text = "Tolled" }
             };
             claimResults.Insert(0, new SelectListItem { Value = null, Text = "Select" });
-            ViewBag.claimResults = claimResults;*/
+            ViewBag.claimResults = claimResults;
         }
     }
 }

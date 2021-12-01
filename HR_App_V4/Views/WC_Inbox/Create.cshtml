@@ -65,6 +65,11 @@
                     <input asp-for="Address" class="form-control" placeholder="1900 Kanawha Blvd E Charleston, WV 25305"/>
                     <span asp-validation-for="Address" class="text-danger"></span>
                 </div>
+                <div class="form-group col-md-3">
+                    <label class="control-label">Date of Birth</label>
+                    <input asp-for="DOB" class="form-control" type="date" />
+                    <span asp-validation-for="DOB" class="text-danger"></span>
+                </div>
            </div>
 
             <br />
@@ -81,7 +86,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label class="control-label">Hire Date</label>
-                            <input asp-for="Hire_Date" class="form-control" />
+                            <input asp-for="Hire_Date" class="form-control" type="date"/>
                             <span asp-validation-for="Hire_Date" class="text-danger"></span>
                         </div>
                     </div>
@@ -119,7 +124,7 @@
                     <div class="row">
                         <div class="form-group col-md-6">
                             <label class="control-label">Date of Injury</label>
-                            <input asp-for="Injury_Date" class="form-control" />
+                            <input asp-for="Injury_Date" class="form-control" type="date"/>
                             <span asp-validation-for="Injury_Date" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
@@ -176,7 +181,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label class="control-label">Missing Work Date</label>
-                    <input asp-for="Missing_Work_Date" class="form-control" />
+                    <input asp-for="Missing_Work_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Missing_Work_Date" class="text-danger"></span>
                 </div>
             </div>
@@ -184,7 +189,7 @@
             <div class="row">
                 <div class="form-group col-md-3">
                     <label class="control-label">Date Began Missing Work</label>
-                    <input asp-for="Begin_Missing_Date" class="form-control" />
+                    <input asp-for="Begin_Missing_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Begin_Missing_Date" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-3">
@@ -194,7 +199,7 @@
                 </div>
                 <div class="form-group col-md-3">
                     <label class="control-label">Date Returned To Work (if applicable)</label>
-                    <input asp-for="Return_To_Work_Date" class="form-control" />
+                    <input asp-for="Return_To_Work_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Return_To_Work_Date" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-3">
@@ -224,7 +229,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label class="control-label">Date first treated</label>
-                    <input asp-for="Treatment_Date" class="form-control" />
+                    <input asp-for="Treatment_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Treatment_Date" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4">

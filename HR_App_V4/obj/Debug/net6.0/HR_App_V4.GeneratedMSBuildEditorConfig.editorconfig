@@ -8,57 +8,57 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = HR_App_V4
 build_property.RootNamespace = HR_App_V4
-build_property.ProjectDir = C:\Users\e096752\Documents\Repos\HR_App_V4\HR_App_V4\
+build_property.ProjectDir = C:\Users\e096752\Documents\Cole's Git Repos\HR_App_V4\HR_App_V4\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\e096752\Documents\Repos\HR_App_V4\HR_App_V4
+build_property.MSBuildProjectDirectory = C:\Users\e096752\Documents\Cole's Git Repos\HR_App_V4\HR_App_V4
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/Home/Index.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/Home/Privacy.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/Shared/Error.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Delete.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Details.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Index.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/_ViewImports.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/_ViewStart.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/Shared/_Layout.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-yp0sj80zo4
 
-[c:/Users/e096752/Documents/Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Create.cshtml]
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-wj88xkjggc
+
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-lwv7g4c9k9
