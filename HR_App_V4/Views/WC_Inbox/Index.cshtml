@@ -4,7 +4,7 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h4>Open Injury Forms</h4>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -13,220 +13,25 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.First_Name)
+                First Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Last_Name)
+                Last Name
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Gender)
+                SSN
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Marital_Status)
+                Address
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Employment_Status)
+                Org Number
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.SSN)
+                Job Title
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DOB)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hourly_Rate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Daily_Rate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Phone_Number)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Claim_Number)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EmployeeID)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Org_Number)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Hire_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Job_Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Work_Schedule)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Injury_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Injury_Time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DOT_12)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Start_Time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Injured_Body_Part)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Side)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Missing_Work)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Missing_Work_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Begin_Missing_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Begin_Missing_Time)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Return_To_Work_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Doctors_Release)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Treatment)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Treatment_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Treatment_Provider)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Treatment_Provider_Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Transport_First_Treatment)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Transport_City)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Injury_Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Equipment)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Witness)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Supervisor_Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Supervisor_Phone)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Questioned)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Medical_History)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inbox_Submitted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Inbox_Reason)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Comments)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.User_Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Supervisor_Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Safety_Specialist_Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Optional_Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Optional_Email2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Optional_Email3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HDHR_Manager_Email)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TX_EROI_Lag)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Claim_Ruling)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Injury_Type)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TTD_Onset_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Restricted_RTW_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Full_Duty_RTW_Date)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date_TTD_Award_Notice)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RTW_Email_Encova)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lost_Time_Start1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lost_Time_End1)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lost_Time_Start2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lost_Time_End2)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lost_Time_Start3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Lost_Time_End3)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Status)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HR_Comments)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Add_User)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date_Added)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.HR_User)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Date_Modified)
+                Injury Date
             </th>
             <th></th>
         </tr>
@@ -241,214 +46,19 @@
                 @Html.DisplayFor(modelItem => item.Last_Name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Gender)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Marital_Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Employment_Status)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.SSN)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DOB)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hourly_Rate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Daily_Rate)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Address)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Phone_Number)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Claim_Number)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EmployeeID)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Org_Number)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Hire_Date)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Job_Title)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Work_Schedule)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Injury_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Injury_Time)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DOT_12)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Start_Time)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Injured_Body_Part)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Side)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Missing_Work)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Missing_Work_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Begin_Missing_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Begin_Missing_Time)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Return_To_Work_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Doctors_Release)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Treatment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Treatment_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Treatment_Provider)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Treatment_Provider_Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Transport_First_Treatment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Transport_City)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Injury_Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Equipment)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Witness)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Supervisor_Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Supervisor_Phone)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Questioned)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Medical_History)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Inbox_Submitted)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Inbox_Reason)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Comments)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.User_Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Supervisor_Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Safety_Specialist_Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Optional_Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Optional_Email2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Optional_Email3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HDHR_Manager_Email)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TX_EROI_Lag)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Claim_Ruling)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Injury_Type)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TTD_Onset_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Restricted_RTW_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Full_Duty_RTW_Date)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date_TTD_Award_Notice)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.RTW_Email_Encova)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lost_Time_Start1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lost_Time_End1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lost_Time_Start2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lost_Time_End2)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lost_Time_Start3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Lost_Time_End3)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Status)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HR_Comments)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Add_User)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date_Added)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.HR_User)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Date_Modified)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |

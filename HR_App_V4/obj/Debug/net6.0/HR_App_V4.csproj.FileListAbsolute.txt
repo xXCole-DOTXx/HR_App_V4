@@ -569,3 +569,4 @@ C:\Users\e096752\Documents\Repos\HR_App_V4\HR_App_V4\obj\Debug\net6.0\HR_App_V4.
 C:\Users\e096752\Documents\Cole's Git Repos\HR_App_V4\HR_App_V4\obj\Debug\net6.0\scopedcss\Views\WC_Inbox\Edit.cshtml.rz.scp.css
 C:\Users\e096752\Documents\Cole's Git Repos\HR_App_V4\HR_App_V4\bin\Debug\net6.0\ExpressiveAnnotations.MvcUnobtrusive.dll
 C:\Users\e096752\Documents\Cole's Git Repos\HR_App_V4\HR_App_V4\bin\Debug\net6.0\ExpressiveAnnotations.dll
+C:\Users\e096752\Documents\Cole's Git Repos\HR_App_V4\HR_App_V4\obj\Debug\net6.0\scopedcss\Views\WC_Inbox\Index.cshtml.rz.scp.css

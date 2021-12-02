@@ -39,10 +39,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -62,3 +58,7 @@ build_metadata.AdditionalFiles.CssScope = b-wj88xkjggc
 [C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-lwv7g4c9k9
+
+[C:/Users/e096752/Documents/Cole's Git Repos/HR_App_V4/HR_App_V4/Views/WC_Inbox/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV0NfSW5ib3hcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-9jd5loihgr
