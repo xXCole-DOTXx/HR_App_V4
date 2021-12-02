@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using HR_App_V4.Models.DB;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace HR_App_V4.Controllers
 {
@@ -54,21 +55,29 @@ namespace HR_App_V4.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ID,First_Name,Last_Name,Gender,Marital_Status,DOB,SSN,Phone_Number,Address,Org_Number,Hire_Date,Job_Title,Work_Schedule,Injury_Date,Injury_Time,Injury_Type,DOT_12,Start_Time,Injured_Body_Part,Side,Missing_Work,Missing_Work_Date,Begin_Missing_Date,Begin_Missing_Time,Return_To_Work_Date,Doctors_Release,Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_First_Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_City,Supervisor_Name,Supervisor_Phone,Injury_Description,Equipment,Witness,Questioned,Medical_History,Inbox_Submitted,Inbox_Reason,Comments,User_Email,Supervisor_Email,Safety_Specialist_Email,Optional_Email,Optional_Email2,Optional_Email3,HDHR_Manager_Email,Add_User,Date_Added")] WC_Inbox wC_Inbox)
+        public async Task<IActionResult> Create([Bind("ID,First_Name,Last_Name,Gender,Marital_Status,DOB,SSN,Phone_Number,Address,Org_Number,Hire_Date,Job_Title,Work_Schedule,Injury_Date,Injury_Time,Injury_Type,DOT_12,Start_Time,Injured_Body_Part,Side,Missing_Work,Missing_Work_Date,Begin_Missing_Date,Begin_Missing_Time,Return_To_Work_Date,Doctors_Release,Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_First_Treatment,Treatment_Date,Treatment_Provider,Treatment_Provider_Phone,Transport_City,Supervisor_Name,Supervisor_Phone,Injury_Description,Equipment,Witness,Questioned,Medical_History,Inbox_Submitted,Inbox_Reason,Comments,User_Email,Supervisor_Email,Safety_Specialist_Email,Optional_Email,Optional_Email2,Optional_Email3,HDHR_Manager_Email,Add_User")] WC_Inbox wC_Inbox)
         {
             DropDowns();
+            
+            wC_Inbox.Add_User = User.Identity.Name;
+            wC_Inbox.Date_Added = DateTime.Now;
+            System.Diagnostics.Debug.WriteLine("User Identity: " + wC_Inbox.Add_User);
+            System.Diagnostics.Debug.WriteLine("Checking if model state is valid...");
             if (ModelState.IsValid)
             {
-                System.Diagnostics.Debug.WriteLine(wC_Inbox.First_Name);
-                System.Diagnostics.Debug.WriteLine(wC_Inbox.Last_Name);
-                System.Diagnostics.Debug.WriteLine(wC_Inbox.Gender);
-                wC_Inbox.Add_User = User.Identity.Name;
-                wC_Inbox.Date_Added = DateTime.Now;
-                System.Diagnostics.Debug.WriteLine(wC_Inbox.Add_User);
-                System.Diagnostics.Debug.WriteLine(wC_Inbox.Date_Added);
+                System.Diagnostics.Debug.WriteLine("The model state was valid.");
                 _context.Add(wC_Inbox);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+            }
+            else
+            {
+                System.Diagnostics.Debug.WriteLine("The model state was not valid.");
+                System.Diagnostics.Debug.WriteLine("User Identity: " + wC_Inbox.Add_User);
+                string messages = string.Join("; ", ModelState.Values
+                                            .SelectMany(x => x.Errors)
+                                            .Select(x => x.ErrorMessage));
+                System.Diagnostics.Debug.WriteLine(messages);
             }
             return View(wC_Inbox);
         }

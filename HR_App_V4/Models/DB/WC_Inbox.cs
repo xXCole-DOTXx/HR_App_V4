@@ -57,8 +57,7 @@ namespace HR_App_V4.Models.DB
         [MaxLength(10)]
         public string? Begin_Missing_Time { get; set; }
         public DateTime? Return_To_Work_Date { get; set; }
-        [MaxLength(3)]
-        public string? Doctors_Release { get; set; }
+        public bool Doctors_Release { get; set; }
         public bool? Treatment { get; set; }
         [RequiredIf("Treatment == true", ErrorMessage = "Treatment Date is required.")]
         public DateTime? Treatment_Date { get; set; }
@@ -107,14 +106,14 @@ namespace HR_App_V4.Models.DB
         public string? Optional_Email3 { get; set; }
         [MaxLength(254)]
         public string? HDHR_Manager_Email { get; set; }
-        public DateTime? TX_EROI_Lag { get; set; }
+        public int TX_EROI_Lag { get; set; }
         public string? Claim_Ruling { get; set; }
         public string? Injury_Type { get; set; }
         public DateTime? TTD_Onset_Date { get; set; }
-        public DateTime? Restricted_RTW { get; set; }
-        public DateTime? Full_Duty_RTW { get; set; }
-        public DateTime? TTD_Award_Notice { get; set; }
-        public DateTime? RTW_Notice_Carrier { get; set; }
+        public DateTime? Restricted_RTW_Date { get; set; }
+        public DateTime? Full_Duty_RTW_Date { get; set; }
+        public DateTime? Date_TTD_Award_Notice { get; set; }
+        public DateTime? RTW_Email_Encova { get; set; }
         public DateTime? Lost_Time_Start1 { get; set; }
         public DateTime? Lost_Time_End1 { get; set; }
         public DateTime? Lost_Time_Start2 { get; set; }
