@@ -542,6 +542,11 @@
                     <input asp-for="Lost_Time_End1" class="form-control" type="date"/>
                     <span asp-validation-for="Lost_Time_End1" class="text-danger"></span>
                 </div>
+                <div class="form-group col-md-4">
+                    <label class="control-label">Number of Days Missed</label>
+                    <input asp-for="Number_Days_Missed" class="form-control" />
+                    <span asp-validation-for="Number_Days_Missed" class="text-danger"></span>
+                </div>
             </div>
 
             <br />
@@ -556,8 +561,8 @@
 
             <input type="hidden" asp-for="Add_User" />
             <input type="hidden" asp-for="Date_Added" />
-            <input type="hidden" asp-for="HR_User" />
-            <input type="hidden" asp-for="Date_Modified" />
+            <input type="hidden" asp-for="HR_User" value="@User.Identity.Name"/>
+            <input type="hidden" asp-for="Date_Modified" value="@DateTime.Now"/>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
