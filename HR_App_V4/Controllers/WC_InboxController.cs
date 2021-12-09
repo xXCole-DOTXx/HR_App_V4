@@ -100,11 +100,9 @@ namespace HR_App_V4.Controllers
             {
                 TimeSpan difference = dto.Lost_Time_End1.Value - dto.TTD_Onset_Date.Value;
                 double days = difference.TotalDays;
-                System.Diagnostics.Debug.WriteLine("Days = " + days);
                 dto.Number_Days_Missed = Convert.ToInt32(days);
             }
-            System.Diagnostics.Debug.WriteLine("Hearing loss = " + dto.Hearing_Loss);
-            System.Diagnostics.Debug.WriteLine("OP = " + dto.OP);
+
             if (id != dto.ID)
             {
                 return NotFound();

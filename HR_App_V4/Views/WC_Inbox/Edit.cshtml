@@ -1,5 +1,5 @@
 ﻿@model HR_App_V4.Models.DB.WC_Inbox
-
+<script src="~/lib/jquery/dist/jquery.js"></script>
 @{
     ViewData["Title"] = "Edit";
 }
@@ -336,7 +336,6 @@
                     $('#why').hide();
                     //When page loads check if the drop down is already yes
                     var chosenValue = $('#Inbox_Submitted').val();
-                    console.log(chosenValue);
                     if (chosenValue == "False") {
                         $('#why').show();
                     }
