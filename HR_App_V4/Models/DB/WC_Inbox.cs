@@ -8,7 +8,7 @@ namespace HR_App_V4.Models.DB
     public partial class WC_Inbox
     {
         public int ID { get; set; }
-        [MaxLength(50), Required] 
+        [MaxLength(50), Required]
         public string First_Name { get; set; } = null!;
         [MaxLength(50)]
         public string Last_Name { get; set; } = null!;
@@ -21,10 +21,8 @@ namespace HR_App_V4.Models.DB
         [MaxLength(4)]
         public string? SSN { get; set; }
         public DateTime? DOB { get; set; }
-        [MaxLength(20)]
-        public string? Hourly_Rate { get; set; }
-        [MaxLength(20)]
-        public string? Daily_Rate { get; set; }
+        public decimal? Hourly_Rate { get; set; }
+        public decimal? Daily_Rate { get; set; }
         [MaxLength(100)]
         public string? Address { get; set; }
         [MaxLength(12)]
@@ -32,17 +30,19 @@ namespace HR_App_V4.Models.DB
         [MaxLength(10)]
         public string? Claim_Number { get; set; }
         [MaxLength(10)]
-        public string? EmployeeID { get; set; } 
+        public string? EmployeeID { get; set; }
         [MaxLength(4)]
         public string Org_Number { get; set; } = null!;
-        public DateTime Hire_Date { get; set; } 
+        public DateTime Hire_Date { get; set; }
         [MaxLength(20)]
         public string Job_Title { get; set; } = null!;
         [MaxLength(50)]
         public string Work_Schedule { get; set; } = null!;
-        public DateTime Injury_Date { get; set; } 
+        public DateTime Injury_Date { get; set; }
         [MaxLength(10)]
         public string Injury_Time { get; set; } = null!;
+        public bool Hearing_Loss { get; set; }
+        public bool OP { get; set; }
         [MaxLength(15)]
         public string DOT_12 { get; set; } = null!;
         [MaxLength(10)]
@@ -108,6 +108,7 @@ namespace HR_App_V4.Models.DB
         [MaxLength(254)]
         public string? HDHR_Manager_Email { get; set; }
         public int TX_EROI_Lag { get; set; }
+        public DateTime? EROI_Date {get;set;}
         public string? Claim_Ruling { get; set; }
         public string? Injury_Type { get; set; }
         public DateTime? TTD_Onset_Date { get; set; }

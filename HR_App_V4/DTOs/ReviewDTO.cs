@@ -32,6 +32,8 @@ namespace HR_App_V4.DTOs
         public DateTime Injury_Date { get; set; }
         [MaxLength(10)]
         public string Injury_Time { get; set; } = null!;
+        public bool Hearing_Loss { get; set; }
+        public bool OP { get; set; }
         [MaxLength(15)]
         public string DOT_12 { get; set; } = null!;
         [MaxLength(10)]
@@ -96,6 +98,7 @@ namespace HR_App_V4.DTOs
         [MaxLength(254)]
         public string? HDHR_Manager_Email { get; set; }
         public int TX_EROI_Lag { get; set; }
+        public DateTime EROI_Date { get; set; }
         [MaxLength(10)]
         public string? Claim_Number { get; set; }
         [MaxLength(10)]
@@ -103,10 +106,8 @@ namespace HR_App_V4.DTOs
         [MaxLength(50)]
         public string? Employment_Status { get; set; }
         public string? Claim_Ruling { get; set; }
-        [MaxLength(20)]
-        public string? Hourly_Rate { get; set; }
-        [MaxLength(20)]
-        public string? Daily_Rate { get; set; }
+        public decimal? Hourly_Rate { get; set; }
+        public decimal? Daily_Rate { get; set; }
         public int Number_Days_Missed { get; set; }
         public string? Injury_Type { get; set; }
         public DateTime? TTD_Onset_Date { get; set; }
@@ -150,6 +151,8 @@ namespace HR_App_V4.DTOs
                 Work_Schedule = this.Work_Schedule,
                 Injury_Date = this.Injury_Date,
                 Injury_Time = this.Injury_Time,
+                Hearing_Loss = this.Hearing_Loss,
+                OP = this.OP,
                 DOT_12 = this.DOT_12,
                 Start_Time = this.Start_Time,
                 Injured_Body_Part = this.Injured_Body_Part,
@@ -184,6 +187,7 @@ namespace HR_App_V4.DTOs
                 Optional_Email3 = this.Optional_Email3,
                 HDHR_Manager_Email = this.HDHR_Manager_Email,
                 TX_EROI_Lag = this.TX_EROI_Lag,
+                EROI_Date = this.EROI_Date,
                 Claim_Number = this.Claim_Number,
                 EmployeeID = this.EmployeeID,
                 Employment_Status = this.Employment_Status,

@@ -444,7 +444,7 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label class="control-label">Employment Status</label>
-                    <input asp-for="Employment_Status" class="form-control" placeholder="Full Time"/>
+                     <select asp-for="Employment_Status" name="Employment_Status" class="form-control col-md-3" asp-items="@ViewBag.employmentTypes"></select>
                     <span asp-validation-for="Employment_Status" class="text-danger"></span>
                 </div>
             </div>
@@ -494,7 +494,7 @@
             <div class="row">
                  <div class="form-group col-md-4">
                     <label class="control-label">Receiving TTD</label>
-                    <select asp-for="Receiving_TTD" name="Missing_Work" class="form-control" asp-items="@ViewBag.options"></select>
+                    <select asp-for="Receiving_TTD" name="Receiving_TTD" class="form-control" asp-items="@ViewBag.options"></select>
                     <span asp-validation-for="Receiving_TTD" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4">
@@ -544,8 +544,29 @@
                 </div>
                 <div class="form-group col-md-4">
                     <label class="control-label">Number of Days Missed</label>
-                    <input asp-for="Number_Days_Missed" class="form-control" />
+                    <input asp-for="Number_Days_Missed" class="form-control" readonly="true"/>
                     <span asp-validation-for="Number_Days_Missed" class="text-danger"></span>
+                </div>
+            </div
+
+            <br />
+            <br />
+
+            <div class="row">
+                 <div class="form-group col-md-4">
+                    <label class="control-label">EROI Date</label>
+                     <input asp-for="EROI_Date" class="form-control" type="date"/>
+                    <span asp-validation-for="EROI_Date" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label class="control-label">Hearing Loss</label>
+                    <select asp-for="Hearing_Loss" name="Hearing_Loss" class="form-control" asp-items="@ViewBag.options"></select>
+                    <span asp-validation-for="Hearing_Loss" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label class="control-label">OP</label>
+                    <select asp-for="OP" name="OP" class="form-control" asp-items="@ViewBag.options"></select>
+                    <span asp-validation-for="OP" class="text-danger"></span>
                 </div>
             </div>
 
@@ -569,6 +590,8 @@
         </form>
     </div>
 </div>
+
+<br />
 
 <div>
     <a asp-action="Index">Back to List</a>

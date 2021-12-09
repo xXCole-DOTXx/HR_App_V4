@@ -18,6 +18,11 @@ namespace HR_App_V4.Controllers
             return View();
         }
 
+        public IActionResult Help()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();

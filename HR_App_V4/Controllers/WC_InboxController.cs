@@ -96,6 +96,15 @@ namespace HR_App_V4.Controllers
         public async Task<IActionResult> Edit(int id, ReviewDTO dto)
         {
             DropDowns();
+            if (dto.TTD_Onset_Date != null && dto.Lost_Time_End1 != null)
+            {
+                TimeSpan difference = dto.Lost_Time_End1.Value - dto.TTD_Onset_Date.Value;
+                double days = difference.TotalDays;
+                System.Diagnostics.Debug.WriteLine("Days = " + days);
+                dto.Number_Days_Missed = Convert.ToInt32(days);
+            }
+            System.Diagnostics.Debug.WriteLine("Hearing loss = " + dto.Hearing_Loss);
+            System.Diagnostics.Debug.WriteLine("OP = " + dto.OP);
             if (id != dto.ID)
             {
                 return NotFound();
@@ -233,7 +242,8 @@ namespace HR_App_V4.Controllers
             List<SelectListItem> employmentTypes = new()
             {
                 new SelectListItem { Value = "Full Time", Text = "Full Time" },
-                new SelectListItem { Value = "Temporary", Text = "Temporary" }
+                new SelectListItem { Value = "Temporary", Text = "Temporary" },
+                new SelectListItem { Value = "Co-op", Text = "Co-op" },
             };
             employmentTypes.Insert(0, new SelectListItem { Value = null, Text = "Select" });
             ViewBag.employmentTypes = employmentTypes;
