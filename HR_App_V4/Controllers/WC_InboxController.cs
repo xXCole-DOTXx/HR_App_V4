@@ -23,7 +23,10 @@ namespace HR_App_V4.Controllers
         // GET: WC_Inbox
         public async Task<IActionResult> Index()
         {
-            return View(await _context.WC_Inbox.ToListAsync());
+             var wc_Inbox = from s in _context.WC_Inbox
+                            select s;
+
+            return View(wc_Inbox);
         }
 
         // GET: WC_Inbox/Details/5
@@ -250,6 +253,7 @@ namespace HR_App_V4.Controllers
             {
                 new SelectListItem { Value = "Rejected", Text = "Rejected" },
                 new SelectListItem { Value = "Compensable", Text = "Compensable" },
+                new SelectListItem { Value = "Pending", Text = "Pending" },
                 new SelectListItem { Value = "Tolled", Text = "Tolled" }
             };
             claimResults.Insert(0, new SelectListItem { Value = null, Text = "Select" });

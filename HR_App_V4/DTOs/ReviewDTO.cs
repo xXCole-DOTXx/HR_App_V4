@@ -43,7 +43,6 @@ namespace HR_App_V4.DTOs
         [MaxLength(10)]
         public string? Side { get; set; }
         public bool Missing_Work { get; set; }
-        public DateTime? Missing_Work_Date { get; set; }
         public DateTime? Begin_Missing_Date { get; set; }
         [MaxLength(10)]
         public string? Begin_Missing_Time { get; set; }
@@ -116,6 +115,8 @@ namespace HR_App_V4.DTOs
         public bool Receiving_TTD { get; set; }
         public DateTime? Date_TTD_Award_Notice { get; set; }
         public DateTime? Claim_Ruling_Date { get; set; }
+        public DateTime? Rulling_Rejection_Date { get; set; }
+        public bool Med_Only { get; set; }  
         public DateTime? Med_Excuse_To { get; set; }
         public string? Doctor { get; set; }
         public DateTime? RTW_Email_Encova { get; set; }
@@ -158,7 +159,6 @@ namespace HR_App_V4.DTOs
                 Injured_Body_Part = this.Injured_Body_Part,
                 Side = this.Side,
                 Missing_Work = this.Missing_Work,
-                Missing_Work_Date = this.Missing_Work_Date,
                 Begin_Missing_Date = this.Begin_Missing_Date,
                 Begin_Missing_Time = this.Begin_Missing_Time,
                 Return_To_Work_Date = this.Return_To_Work_Date,
@@ -202,6 +202,8 @@ namespace HR_App_V4.DTOs
                 Receiving_TTD = this.Receiving_TTD,
                 Date_TTD_Award_Notice = this.Date_TTD_Award_Notice,
                 Claim_Ruling_Date = this.Claim_Ruling_Date,
+                Rulling_Rejection_Date = this.Rulling_Rejection_Date,
+                Med_Only = this.Med_Only,
                 Med_Excuse_To = this.Med_Excuse_To,
                 Doctor = this.Doctor,
                 RTW_Email_Encova = this.RTW_Email_Encova,

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "WLpWjrqyRpuwCR8l1y1AGxeRws8LZe2fk7WXVFWZuHE=",
+  "Hash": "jy7jifAdj3Tzm89UuQO/UN/ctO1MrWjqpTLW2goSiuY=",
   "Source": "HR_App_V4",
   "BasePath": "_content/HR_App_V4",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\e096752\\Documents\\Cole's Git Repos\\HR_App_V4\\HR_App_V4\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\HR_App_V4.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\e096752\\Documents\\Cole's Git Repos\\HR_App_V4\\HR_App_V4\\wwwroot\\Assets\\dot.png",
+      "SourceId": "HR_App_V4",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\e096752\\Documents\\Cole's Git Repos\\HR_App_V4\\HR_App_V4\\wwwroot\\",
+      "BasePath": "_content/HR_App_V4",
+      "RelativePath": "Assets/dot.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\dot.png"
     },
     {
       "Identity": "C:\\Users\\e096752\\Documents\\Cole's Git Repos\\HR_App_V4\\HR_App_V4\\wwwroot\\css\\site.css",

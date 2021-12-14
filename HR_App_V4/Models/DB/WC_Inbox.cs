@@ -52,7 +52,6 @@ namespace HR_App_V4.Models.DB
         [MaxLength(10)]
         public string? Side { get; set; }
         public bool Missing_Work { get; set; }
-        public DateTime? Missing_Work_Date { get; set; }
         public DateTime? Begin_Missing_Date { get; set; }
         [MaxLength(10)]
         public string? Begin_Missing_Time { get; set; }
@@ -74,7 +73,6 @@ namespace HR_App_V4.Models.DB
         [MaxLength(50)]
         [RequiredIf("Treatment == true", ErrorMessage = "The city of treatment is required.")]
         public string? Transport_City { get; set; }
-        [MaxLength(250)]
         public string Injury_Description { get; set; } = null!;
         [MaxLength(250)]
         public string? Equipment { get; set; }
@@ -91,7 +89,6 @@ namespace HR_App_V4.Models.DB
         public bool Inbox_Submitted { get; set; }
         [RequiredIf("Inbox_Submitted == false", ErrorMessage = "The reason is required.")]
         public string? Inbox_Reason { get; set; }
-        [MaxLength(250)]
         public string? Comments { get; set; }
         [MaxLength(254)]
         public string User_Email { get; set; } = null!;
@@ -105,7 +102,7 @@ namespace HR_App_V4.Models.DB
         public string? Optional_Email2 { get; set; }
         [MaxLength(254)]
         public string? Optional_Email3 { get; set; }
-        [MaxLength(254)]
+        [MaxLength(254), Required]
         public string? HDHR_Manager_Email { get; set; }
         public int TX_EROI_Lag { get; set; }
         public DateTime? EROI_Date {get;set;}
@@ -117,7 +114,9 @@ namespace HR_App_V4.Models.DB
         public bool Receiving_TTD { get; set; } 
         public DateTime? Date_TTD_Award_Notice { get; set; }
         public DateTime? Claim_Ruling_Date { get; set; }
+        public DateTime? Rulling_Rejection_Date { get; set; }
         public DateTime? Med_Excuse_To { get; set; }
+        public bool Med_Only { get; set; }
         public string? Doctor { get; set; } 
         public DateTime? RTW_Email_Encova { get; set; }
         public DateTime? Lost_Time_Start1 { get; set; }

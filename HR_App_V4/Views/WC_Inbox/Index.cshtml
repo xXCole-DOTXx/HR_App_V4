@@ -22,9 +22,6 @@
                 SSN
             </th>
             <th>
-                Address
-            </th>
-            <th>
                 Org Number
             </th>
             <th>
@@ -33,12 +30,15 @@
             <th>
                 Injury Date
             </th>
+            <th>
+                Treatment Persued?
+            </th>
             <th></th>
         </tr>
     </thead>
     <tbody>
 @foreach (var item in Model) {
-        <tr>
+        <tr style="@(item.Date_Modified == null ? "background-color: yellow" : "")">
             <td>
                 @Html.DisplayFor(modelItem => item.First_Name)
             </td>
@@ -49,9 +49,6 @@
                 @Html.DisplayFor(modelItem => item.SSN)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.Org_Number)
             </td>
             <td>
@@ -59,6 +56,9 @@
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Injury_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Treatment)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.ID">Review</a> |

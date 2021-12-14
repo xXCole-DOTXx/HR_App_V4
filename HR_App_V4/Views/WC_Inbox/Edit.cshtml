@@ -164,49 +164,38 @@
             <br />
             
             <div class="row">
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label class="control-label">Injured Body Part</label>
                     <input asp-for="Injured_Body_Part" class="form-control" placeholder="Forearm"/>
                     <span asp-validation-for="Injured_Body_Part" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label class="control-label">Which Side?</label>
                     <select asp-for="Side" name="Side" class="form-control" asp-items="@ViewBag.sides"></select>
                     <span asp-validation-for="Side" class="text-danger"></span>
                 </div>
-                <div class="form-group form-check col-md-3">
+                <div class="form-group form-check col-md-4">
                     <label class="control-label">Missing Work?</label>
                     <select asp-for="Missing_Work" name="Missing_Work" class="form-control" asp-items="@ViewBag.options"></select>
                     <span asp-validation-for="Missing_Work" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-3">
-                    <label class="control-label">Missing Work Date</label>
-                    <input asp-for="Missing_Work_Date" class="form-control" type="date"/>
-                    <span asp-validation-for="Missing_Work_Date" class="text-danger"></span>
-                </div>
             </div>
             <br />
             <div class="row">
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label class="control-label">Date Began Missing Work</label>
                     <input asp-for="Begin_Missing_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Begin_Missing_Date" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label class="control-label">Time Began Missing Work</label>
                     <input asp-for="Begin_Missing_Time" class="form-control" placeholder="11:30am"/>
                     <span asp-validation-for="Begin_Missing_Time" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-3">
+                <div class="form-group col-md-4">
                     <label class="control-label">Date Returned To Work (if applicable)</label>
                     <input asp-for="Return_To_Work_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Return_To_Work_Date" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-3">
-                    <label class="control-label">Doctors Work Release obtained?</label>
-                    <select asp-for="Doctors_Release" name="Doctors_Release" class="form-control" asp-items="@ViewBag.options"></select>
-                    <span asp-validation-for="Doctors_Release" class="text-danger"></span>
-                    <p>Do not choose Yes unless you have the work release in hand; send it to HR.</p>
                 </div>
             </div>
             <br />
@@ -222,20 +211,26 @@
             <br />
             <div id="treatmentQuestions">
             <div class="row">
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label class="control-label">Method of travel to first treatment</label>
                     <select asp-for="Transport_First_Treatment" name="Transport_First_Treatment" class="form-control" asp-items="@ViewBag.travelMethods"></select>
                     <span asp-validation-for="Transport_First_Treatment" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label class="control-label">Date first treated</label>
                     <input asp-for="Treatment_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Treatment_Date" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-4">
+                <div class="form-group col-md-3">
                     <label class="control-label">Treatment Provider where first treated</label>
                     <input asp-for="Treatment_Provider" class="form-control" />
                     <span asp-validation-for="Treatment_Provider" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-3">
+                    <label class="control-label">Doctors Work Release obtained?</label>
+                    <select asp-for="Doctors_Release" name="Doctors_Release" class="form-control" asp-items="@ViewBag.options"></select>
+                    <span asp-validation-for="Doctors_Release" class="text-danger"></span>
+                    <p>Do not choose Yes unless you have the work release in hand; send it to HR.</p>
                 </div>
             </div>
             <br />
@@ -433,12 +428,12 @@
             <div class="row">
                  <div class="form-group col-md-4">
                     <label class="control-label">Claim Number</label>
-                    <input asp-for="Claim_Number" class="form-control" placeholder="06569"/>
+                    <input asp-for="Claim_Number" class="form-control"/>
                     <span asp-validation-for="Claim_Number" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4">
                     <label class="control-label">Employee ID</label>
-                    <input asp-for="EmployeeID" class="form-control" placeholder="e078524"/>
+                    <input asp-for="EmployeeID" class="form-control"/>
                     <span asp-validation-for="EmployeeID" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4">
@@ -453,29 +448,25 @@
             <div class="row">
                  <div class="form-group col-md-4">
                     <label class="control-label">Hourly Pay Rate</label>
-                    <input asp-for="Hourly_Rate" class="form-control" placeholder="22.50"/>
+                    <input asp-for="Hourly_Rate" class="form-control"/>
                     <span asp-validation-for="Hourly_Rate" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4">
                     <label class="control-label">Daily Pay Rate</label>
-                    <input asp-for="Daily_Rate" class="form-control" placeholder="180"/>
+                    <input asp-for="Daily_Rate" class="form-control"/>
                     <span asp-validation-for="Daily_Rate" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-4">
-                    <label class="control-label">TX EROI Lag</label>
-                    <input asp-for="TX_EROI_Lag" class="form-control" placeholder="2"/>
-                    <span asp-validation-for="TX_EROI_Lag" class="text-danger"></span>
+                 <div class="form-group col-md-4">
+                    <label class="control-label">Doctor</label>
+                    <input asp-for="Doctor" class="form-control" />
+                    <span asp-validation-for="Doctor" class="text-danger"></span>
                 </div>
             </div>
 
             <br />
 
             <div class="row">
-                 <div class="form-group col-md-4">
-                    <label class="control-label">TTD Onset Date</label>
-                    <input asp-for="TTD_Onset_Date" class="form-control" type="date"/>
-                    <span asp-validation-for="TTD_Onset_Date" class="text-danger"></span>
-                </div>
+                 
                 <div class="form-group col-md-4">
                     <label class="control-label">Restricted RTW Date</label>
                     <input asp-for="Restricted_RTW_Date" class="form-control" type="date"/>
@@ -486,25 +477,10 @@
                     <input asp-for="Full_Duty_RTW_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Full_Duty_RTW_Date" class="text-danger"></span>
                 </div>
-            </div>
-
-            <br />
-
-            <div class="row">
-                 <div class="form-group col-md-4">
-                    <label class="control-label">Receiving TTD</label>
-                    <select asp-for="Receiving_TTD" name="Receiving_TTD" class="form-control" asp-items="@ViewBag.options"></select>
-                    <span asp-validation-for="Receiving_TTD" class="text-danger"></span>
-                </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">Date TTD Awarded</label>
-                    <input asp-for="Date_TTD_Award_Notice" class="form-control" type="date"/>
-                    <span asp-validation-for="Date_TTD_Award_Notice" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-4">
-                    <label class="control-label">Claim Ruling Date</label>
-                    <input asp-for="Claim_Ruling_Date" class="form-control" type="date"/>
-                    <span asp-validation-for="Claim_Ruling_Date" class="text-danger"></span>
+                    <label class="control-label">RTW Email Encova</label>
+                    <input asp-for="RTW_Email_Encova" class="form-control" type="date"/>
+                    <span asp-validation-for="RTW_Email_Encova" class="text-danger"></span>
                 </div>
             </div>
 
@@ -516,17 +492,154 @@
                      <input asp-for="Med_Excuse_To" class="form-control" type="date"/>
                     <span asp-validation-for="Med_Excuse_To" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-4">
-                    <label class="control-label">Doctor</label>
-                    <input asp-for="Doctor" class="form-control" />
-                    <span asp-validation-for="Doctor" class="text-danger"></span>
+               <div class="form-group col-md-2">
+                    <label class="control-label">Hearing Loss</label>
+                    <select asp-for="Hearing_Loss" name="Hearing_Loss" class="form-control" asp-items="@ViewBag.options"></select>
+                    <span asp-validation-for="Hearing_Loss" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label class="control-label">OP</label>
+                    <select asp-for="OP" name="OP" class="form-control" asp-items="@ViewBag.options"></select>
+                    <span asp-validation-for="OP" class="text-danger"></span>
                 </div>
                 <div class="form-group col-md-4">
-                    <label class="control-label">RTW Email Encova</label>
-                    <input asp-for="RTW_Email_Encova" class="form-control" type="date"/>
-                    <span asp-validation-for="RTW_Email_Encova" class="text-danger"></span>
+                    <label class="control-label">Number of Days Missed</label>
+                    <input asp-for="Number_Days_Missed" class="form-control" readonly="true"/>
+                    <span asp-validation-for="Number_Days_Missed" class="text-danger"></span>
                 </div>
             </div>
+
+            <br />
+
+            <div class="row">
+                 <div class="form-group col-md-4">
+                    <label class="control-label">EROI Date</label>
+                     <input asp-for="EROI_Date" class="form-control" type="date"/>
+                    <span asp-validation-for="EROI_Date" class="text-danger"></span>
+                </div>
+                 <div class="form-group col-md-4">
+                    <label class="control-label">TX EROI Lag</label>
+                    <input asp-for="TX_EROI_Lag" class="form-control"/>
+                    <span asp-validation-for="TX_EROI_Lag" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="control-label">Receiving TTD</label>
+                    <select asp-for="Receiving_TTD" name="Receiving_TTD" class="form-control" asp-items="@ViewBag.options"></select>
+                    <span asp-validation-for="Receiving_TTD" class="text-danger"></span>
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group" id="medOnly">
+                        <label class="control-label">Med Only?</label>
+                         <select asp-for="Med_Only" name="Med_Only" class="form-control" asp-items="@ViewBag.options"></select>
+                        <span asp-validation-for="Med_Only" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-8" id="TTD">
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label class="control-label">Date TTD Awarded</label>
+                            <input asp-for="Date_TTD_Award_Notice" class="form-control" type="date"/>
+                            <span asp-validation-for="Date_TTD_Award_Notice" class="text-danger"></span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label class="control-label">TTD Onset Date</label>
+                            <input asp-for="TTD_Onset_Date" class="form-control" type="date"/>
+                            <span asp-validation-for="TTD_Onset_Date" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#TTD').hide();
+                    var chosenValue = $('#Med_Only').val();
+                    if (chosenValue == "True") {
+                        $('#TTD').show();
+                    }
+                    else {
+                        $('#TTD').hide();
+                    }
+                    $('#Med_Only').change(function () {
+                        var selectedValue = $(this).val();
+                        if (selectedValue == "True") {
+                            $('#TTD').show();
+                        }
+                        else {
+                            $('#TTD').hide();
+                        }
+                    });
+                });
+            </script>
+
+            <br />
+
+            <div class="row">
+                <div class="form-group col-md-4" id="ruling">
+                    <label class="control-label">Claim Ruling</label>
+                     <select asp-for="Claim_Ruling" name="Claim_Ruling" class="form-control" asp-items="@ViewBag.claimResults"></select>
+                    <span asp-validation-for="Claim_Ruling" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4" id="compDate">
+                    <label class="control-label">Claim Ruling Comp Date</label>
+                    <input asp-for="Claim_Ruling_Date" class="form-control" type="date"/>
+                    <span asp-validation-for="Claim_Ruling_Date" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4" id="rejectDate">
+                    <label class="control-label">Ruling Rejection Date</label>
+                     <input asp-for="Rulling_Rejection_Date" class="form-control" type="date"/>
+                    <span asp-validation-for="Rulling_Rejection_Date" class="text-danger"></span>
+                </div>
+            </div>
+
+             <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#rejectDate').hide();
+                    var chosenValue = $('#Claim_Ruling').val();
+                    if (chosenValue == "Rejected") {
+                        $('#rejectDate').show();
+                    }
+                    else {
+                        $('#rejectDate').hide();
+                    }
+                    $('#Claim_Ruling').change(function () {
+                        var selectedValue = $(this).val();
+                        if (selectedValue == "Rejected") {
+                            $('#rejectDate').show();
+                        }
+                        else {
+                            $('#rejectDate').hide();
+                        }
+                    });
+                });
+            </script>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#compDate').hide();
+                    var chosenValue = $('#Claim_Ruling').val();
+                    if (chosenValue == "Compensable") {
+                        $('#compDate').show();
+                    }
+                    else {
+                        $('#compDate').hide();
+                    }
+                    $('#Claim_Ruling').change(function () {
+                        var selectedValue = $(this).val();
+                        if (selectedValue == "Compensable") {
+                            $('#compDate').show();
+                        }
+                        else {
+                            $('#compDate').hide();
+                        }
+                    });
+                });
+            </script>
 
             <br />
 
@@ -541,33 +654,67 @@
                     <input asp-for="Lost_Time_End1" class="form-control" type="date"/>
                     <span asp-validation-for="Lost_Time_End1" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-4">
-                    <label class="control-label">Number of Days Missed</label>
-                    <input asp-for="Number_Days_Missed" class="form-control" readonly="true"/>
-                    <span asp-validation-for="Number_Days_Missed" class="text-danger"></span>
-                </div>
             </div
 
             <br />
             <br />
 
-            <div class="row">
+            <div class="row" id="LostTime2">
                  <div class="form-group col-md-4">
-                    <label class="control-label">EROI Date</label>
-                     <input asp-for="EROI_Date" class="form-control" type="date"/>
-                    <span asp-validation-for="EROI_Date" class="text-danger"></span>
+                    <label class="control-label">Lost Time Start 2</label>
+                     <input asp-for="Lost_Time_Start2" class="form-control" type="date"/>
+                    <span asp-validation-for="Lost_Time_Start2" class="text-danger"></span>
                 </div>
-                <div class="form-group col-md-2">
-                    <label class="control-label">Hearing Loss</label>
-                    <select asp-for="Hearing_Loss" name="Hearing_Loss" class="form-control" asp-items="@ViewBag.options"></select>
-                    <span asp-validation-for="Hearing_Loss" class="text-danger"></span>
-                </div>
-                <div class="form-group col-md-2">
-                    <label class="control-label">OP</label>
-                    <select asp-for="OP" name="OP" class="form-control" asp-items="@ViewBag.options"></select>
-                    <span asp-validation-for="OP" class="text-danger"></span>
+                <div class="form-group col-md-4">
+                    <label class="control-label">Lost Time End 2</label>
+                    <input asp-for="Lost_Time_End2" class="form-control" type="date"/>
+                    <span asp-validation-for="Lost_Time_End2" class="text-danger"></span>
                 </div>
             </div>
+
+            <br />
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#LostTime2').hide();
+                    var start1 = $('#Lost_Time_Start1').val();
+                    var end1 = $('#Lost_Time_End1').val();
+                    if (start1 === "" || end1 === "") {
+                        $('#LostTime2').hide();
+                    }
+                    else {
+                        $('#LostTime2').show();
+                    }
+                });
+            </script>
+
+            <div class="row" id="LostTime3">
+                 <div class="form-group col-md-4">
+                    <label class="control-label">Lost Time Start 3</label>
+                     <input asp-for="Lost_Time_Start3" class="form-control" type="date"/>
+                    <span asp-validation-for="Lost_Time_Start3" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label class="control-label">Lost Time End 3</label>
+                    <input asp-for="Lost_Time_End3" class="form-control" type="date"/>
+                    <span asp-validation-for="Lost_Time_End3" class="text-danger"></span>
+                </div>
+                <br />
+            </div>
+
+              <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#LostTime3').hide();
+                    var start2 = $('#Lost_Time_Start2').val();
+                    var end2 = $('#Lost_Time_End2').val();
+                    if (start2 == "" || end2 == "") {
+                        $('#LostTime3').hide();
+                    }
+                    else {
+                        $('#LostTime3').show();
+                    }
+                });
+            </script>
 
             <br />
 
@@ -576,7 +723,7 @@
                 <textarea asp-for="HR_Comments" class="form-control"></textarea>
                 <span asp-validation-for="HR_Comments" class="text-danger"></span>
             </div>
-
+   
             <br />
 
             <input type="hidden" asp-for="Add_User" />

@@ -32,6 +32,7 @@ namespace HR_App_V4.DTOs
         public DateTime Injury_Date { get; set; }
         [MaxLength(10)]
         public string Injury_Time { get; set; } = null!;
+        public string? Injury_Type { get; set; }
         [MaxLength(15)]
         public string DOT_12 { get; set; } = null!;
         [MaxLength(10)]
@@ -41,7 +42,6 @@ namespace HR_App_V4.DTOs
         [MaxLength(10)]
         public string? Side { get; set; }
         public bool Missing_Work { get; set; }
-        public DateTime? Missing_Work_Date { get; set; }
         public DateTime? Begin_Missing_Date { get; set; }
         [MaxLength(10)]
         public string? Begin_Missing_Time { get; set; }
@@ -62,7 +62,6 @@ namespace HR_App_V4.DTOs
         [MaxLength(50)]
         [RequiredIf("Treatment == true", ErrorMessage = "The city of treatment is required.")]
         public string? Transport_City { get; set; }
-        [MaxLength(250)]
         public string Injury_Description { get; set; } = null!;
         [MaxLength(250)]
         public string? Equipment { get; set; }
@@ -79,7 +78,6 @@ namespace HR_App_V4.DTOs
         public bool Inbox_Submitted { get; set; }
         [RequiredIf("Inbox_Submitted == false", ErrorMessage = "The reason is required.")]
         public string? Inbox_Reason { get; set; }
-        [MaxLength(250)]
         public string? Comments { get; set; }
         [MaxLength(254)]
         public string User_Email { get; set; } = null!;
@@ -93,7 +91,7 @@ namespace HR_App_V4.DTOs
         public string? Optional_Email2 { get; set; }
         [MaxLength(254)]
         public string? Optional_Email3 { get; set; }
-        [MaxLength(254)]
+        [MaxLength(254), Required]
         public string? HDHR_Manager_Email { get; set; }
         public string Add_User { get; set; } = null!;
         public DateTime Date_Added { get; set; }
@@ -116,12 +114,12 @@ namespace HR_App_V4.DTOs
                 Work_Schedule = this.Work_Schedule,
                 Injury_Date = this.Injury_Date,
                 Injury_Time = this.Injury_Time,
+                Injury_Type = this.Injury_Type,
                 DOT_12 = this.DOT_12,
                 Start_Time = this.Start_Time,
                 Injured_Body_Part = this.Injured_Body_Part,
                 Side = this.Side,
                 Missing_Work = this.Missing_Work,
-                Missing_Work_Date = this.Missing_Work_Date,
                 Begin_Missing_Date = this.Begin_Missing_Date,
                 Begin_Missing_Time = this.Begin_Missing_Time,
                 Return_To_Work_Date = this.Return_To_Work_Date,
