@@ -97,7 +97,7 @@ namespace HR_App_V4.DTOs
         [MaxLength(254)]
         public string? HDHR_Manager_Email { get; set; }
         public int TX_EROI_Lag { get; set; }
-        public DateTime EROI_Date { get; set; }
+        public DateTime? EROI_Date { get; set; }
         [MaxLength(10)]
         public string? Claim_Number { get; set; }
         [MaxLength(10)]

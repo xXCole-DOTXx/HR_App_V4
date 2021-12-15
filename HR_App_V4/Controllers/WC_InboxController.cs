@@ -106,6 +106,13 @@ namespace HR_App_V4.Controllers
                 dto.Number_Days_Missed = Convert.ToInt32(days);
             }
 
+            if (dto.Treatment_Date != null && dto.EROI_Date != null)
+            {
+                TimeSpan lagDiff = dto.Treatment_Date.Value - dto.EROI_Date.Value;
+                double lag = lagDiff.TotalDays;
+                dto.TX_EROI_Lag = Convert.ToInt32(lag);
+            }
+
             if (id != dto.ID)
             {
                 return NotFound();
