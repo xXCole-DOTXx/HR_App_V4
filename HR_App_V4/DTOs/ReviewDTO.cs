@@ -116,6 +116,7 @@ namespace HR_App_V4.DTOs
         public DateTime? Date_TTD_Award_Notice { get; set; }
         public DateTime? Claim_Ruling_Date { get; set; }
         public DateTime? Rulling_Rejection_Date { get; set; }
+        public DateTime? Tolled_Date { get; set; }
         public bool Med_Only { get; set; }  
         public DateTime? Med_Excuse_To { get; set; }
         public string? Doctor { get; set; }
@@ -203,6 +204,7 @@ namespace HR_App_V4.DTOs
                 Date_TTD_Award_Notice = this.Date_TTD_Award_Notice,
                 Claim_Ruling_Date = this.Claim_Ruling_Date,
                 Rulling_Rejection_Date = this.Rulling_Rejection_Date,
+                Tolled_Date = this.Tolled_Date,
                 Med_Only = this.Med_Only,
                 Med_Excuse_To = this.Med_Excuse_To,
                 Doctor = this.Doctor,

@@ -115,6 +115,7 @@ namespace HR_App_V4.Models.DB
         public DateTime? Date_TTD_Award_Notice { get; set; }
         public DateTime? Claim_Ruling_Date { get; set; }
         public DateTime? Rulling_Rejection_Date { get; set; }
+        public DateTime? Tolled_Date { get; set; }
         public DateTime? Med_Excuse_To { get; set; }
         public bool Med_Only { get; set; }
         public string? Doctor { get; set; } 

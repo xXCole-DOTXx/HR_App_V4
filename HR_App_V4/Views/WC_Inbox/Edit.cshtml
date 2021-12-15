@@ -542,40 +542,18 @@
                 <div class="col-md-8" id="TTD">
                     <div class="row">
                         <div class="form-group col-md-6">
-                            <label class="control-label">Date TTD Awarded</label>
+                            <label class="control-label">Date TTD Awarded (if applicable)</label>
                             <input asp-for="Date_TTD_Award_Notice" class="form-control" type="date"/>
                             <span asp-validation-for="Date_TTD_Award_Notice" class="text-danger"></span>
                         </div>
                         <div class="form-group col-md-6">
-                            <label class="control-label">TTD Onset Date</label>
+                            <label class="control-label">TTD Onset Date (if applicable)</label>
                             <input asp-for="TTD_Onset_Date" class="form-control" type="date"/>
                             <span asp-validation-for="TTD_Onset_Date" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $('#TTD').hide();
-                    var chosenValue = $('#Med_Only').val();
-                    if (chosenValue == "True") {
-                        $('#TTD').show();
-                    }
-                    else {
-                        $('#TTD').hide();
-                    }
-                    $('#Med_Only').change(function () {
-                        var selectedValue = $(this).val();
-                        if (selectedValue == "True") {
-                            $('#TTD').show();
-                        }
-                        else {
-                            $('#TTD').hide();
-                        }
-                    });
-                });
-            </script>
 
             <br />
 
@@ -594,6 +572,11 @@
                     <label class="control-label">Ruling Rejection Date</label>
                      <input asp-for="Rulling_Rejection_Date" class="form-control" type="date"/>
                     <span asp-validation-for="Rulling_Rejection_Date" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4" id="tolledDate">
+                    <label class="control-label">Tolled Date</label>
+                     <input asp-for="Tolled_Date" class="form-control" type="date"/>
+                    <span asp-validation-for="Tolled_Date" class="text-danger"></span>
                 </div>
             </div>
 
@@ -636,6 +619,28 @@
                         }
                         else {
                             $('#compDate').hide();
+                        }
+                    });
+                });
+            </script>
+
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('#tolledDate').hide();
+                    var chosenValue = $('#Claim_Ruling').val();
+                    if (chosenValue == "Tolled") {
+                        $('#tolledDate').show();
+                    }
+                    else {
+                        $('#tolledDate').hide();
+                    }
+                    $('#Claim_Ruling').change(function () {
+                        var selectedValue = $(this).val();
+                        if (selectedValue == "Tolled") {
+                            $('#tolledDate').show();
+                        }
+                        else {
+                            $('#tolledDate').hide();
                         }
                     });
                 });
